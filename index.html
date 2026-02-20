@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="weather-app">
+        <div class="search-box">
+            <input type="text" id="cityInput" placeholder="Enter city name...">
+            <button id="searchBtn">Search</button>
+        </div>
+
+        <div class="weather-info" id="weatherInfo">
+            <div class="weather-icon">
+                <img id="weatherIcon" src="" alt="Weather Icon">
+            </div>
+            <h2 id="cityName">--</h2>
+            <p id="weatherDescription">--</p>
+            <div class="temperature">
+                <span id="temp">--</span>
+                <span class="unit">°C</span>
+            </div>
+
+            <div class="details">
+                <div class="detail-item">
+                    <span class="detail-label">Humidity</span>
+                    <span id="humidity" class="detail-value">--</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Wind Speed</span>
+                    <span id="windSpeed" class="detail-value">--</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Feels Like</span>
+                    <span id="feelsLike" class="detail-value">--</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="error-message" id="errorMessage">
+            <p>City not found. Please try again.</p>
+        </div>
+
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Loading weather data...</p>
+        </div>
+
+        <div class="api-note">
+            <p>Note: Replace API_KEY in script.js with your OpenWeatherMap API key.</p>
+            <p>Get free API key at: <a href="https://openweathermap.org/api" target="_blank">openweathermap.org/api</a>
+            </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
